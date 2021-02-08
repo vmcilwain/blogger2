@@ -1,0 +1,42 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+  
+    {
+      "name": "Rails server",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceRoot}/bin/rails",
+      "env": {
+        "PATH": "/Users/vmcilwain/.rvm/gems/ruby-2.6.5/bin:/Users/vmcilwain/.rvm/gems/ruby-2.6.5@global/bin:/Users/vmcilwain/.rvm/rubies/ruby-2.6.5/bin:/Users/vmcilwain/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/sbin:/usr/local/mysql/bin:/Users/vmcilwain/bin:/usr/local/mysql/bin:/Users/vmcilwain/bin:/usr/local/bin",
+        "GEM_HOME": "/Users/vmcilwain/.rvm/gems/ruby-2.6.5",
+        "GEM_PATH": "/Users/vmcilwain/.rvm/gems/ruby-2.6.5:/Users/vmcilwain/.rvm/gems/ruby-2.6.5@global",
+        "RUBY_VERSION": "ruby-2.6.5"
+      },
+      "args": [
+          "server"
+      ]
+    },
+    {
+      "cwd": "${workspaceRoot}",
+      "name": "Minitest - Run at cursor position",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rails",
+      "env": {
+        "PATH": "/Users/vmcilwain/.rvm/gems/ruby-2.6.5/bin:/Users/vmcilwain/.rvm/gems/ruby-2.6.5@global/bin:/Users/vmcilwain/.rvm/rubies/ruby-2.6.5/bin:/Users/vmcilwain/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/sbin:/usr/local/mysql/bin:/Users/vmcilwain/bin:/usr/local/mysql/bin:/Users/vmcilwain/bin:/usr/local/bin",
+        "GEM_HOME": "/Users/vmcilwain/.rvm/gems/ruby-2.6.5",
+        "GEM_PATH": "/Users/vmcilwain/.rvm/gems/ruby-2.6.5:/Users/vmcilwain/.rvm/gems/ruby-2.6.5@global",
+        "RUBY_VERSION": "ruby-2.6.5"
+      },
+      "args": [
+        "test",
+        "${file}:${lineNumber}"
+      ]
+    },
+  ]
+}
