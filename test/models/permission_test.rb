@@ -12,4 +12,7 @@ class PermissionTest < ActiveSupport::TestCase
     should validate_presence_of :role_id
     should validate_presence_of :user_id
   end
+
+  should belong_to(:role)
+  should belong_to(:user)
 end

@@ -11,4 +11,18 @@ class RoleTest < ActiveSupport::TestCase
     should validate_presence_of :name
     should validate_uniqueness_of :name
   end
+
+  should have_many(:users).through(:permissions)
+
+  test '#user?' do
+    permission = create :permission
+    role = permission.role
+
+    assert role.user?(permission.user)
+
+    user = create :user
+    assert_not role.user?(user)
+
+    assert_not role.user?(nil)
+  end
 end
