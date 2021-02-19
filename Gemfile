@@ -58,6 +58,7 @@ group :test do
   gem 'rails-controller-testing', '~> 1.0'
   gem 'shoulda', '~> 4.0'
   gem 'shoulda-matchers', '~> 4.0'
+  gem 'simplecov', '~> 0.21', require: false
   gem 'webdrivers'
 end
 
