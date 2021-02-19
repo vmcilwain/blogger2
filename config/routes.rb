@@ -1,5 +1,10 @@
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
-  devise_for :users
   root 'pages#index'
+
+  devise_for :users
+
+  namespace :admin do
+    resources :articles, only: %i[index]
+  end
 end
