@@ -38,10 +38,10 @@ def admin_user
   user
 end
 
-def sample_string(number=5, joiner="\s")
+def sample_string(number = 5, joiner = "\s")
   Faker::Lorem.words(number: number).join(joiner)
 end
 
-def sample_text(number=5, joiner="\n")
+def sample_text(number = 5, joiner = "\n")
   Faker::Lorem.paragraphs(number: number).join(joiner)
 end
