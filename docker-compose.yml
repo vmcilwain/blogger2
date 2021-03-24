@@ -3,8 +3,7 @@ version: '3.9'
 services:
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
-    # command: bash -c "rm -f tmp/pids/server.pid && rdebug-ide --host 0.0.0.0 --port 1234 -- bin/rails s -p 3000 -b 0.0.0.0"
+    command: bash -c "rm -f tmp/pids/server.pid && rdebug-ide --host 0.0.0.0 --port 1234 -- bin/rails s -p 3000 -b 0.0.0.0"
     ports:
       - '3000:3000'
       - '1234:1234'
@@ -14,8 +13,8 @@ services:
       - .:/app
       - node_modules:/app/node_modules
     environment:
-      - DBUSERNAME=root # n0rails4u
-      - DBPASSWORD=/run/secrets/db_password # n0rails4u
+      - DBUSERNAME=root
+      - DBPASSWORD=/run/secrets/db_password
       - WEB_CONCURRENCY=0
       - RAILS_MAX_THREADS=1
     secrets:
@@ -27,7 +26,7 @@ services:
     volumes:
       - db:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=/run/secrets/db_password # n0rails4u
+      - MYSQL_ROOT_PASSWORD=/run/secrets/db_password
     secrets:
       - db_password
 
