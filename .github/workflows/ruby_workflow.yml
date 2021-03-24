@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.6.6']
+        ruby-version: ['2.6.5']
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -76,7 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.6.6']
+        ruby-version: ['2.6.5']
     services:
       db:
         image: mysql:5.7
