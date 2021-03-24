@@ -30,4 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  site_name: Blogger2
+
+  alert:
+    authorization: You are not authorized to perform this action.
+    success: '%{class_name} was successfully %{status}.'
+    error: There were errors!
+    notice: Notice!
+    alert: Alert!
