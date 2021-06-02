@@ -11,7 +11,7 @@ services:
       - db
     volumes:
       - .:/app
-      - node_modules:/app/node_modules
+      - ./node_modules:/app/node_modules
     environment:
       - DBUSERNAME=root
       - DBPASSWORD=/run/secrets/db_password
